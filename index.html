@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<title>ICO Dashboard</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.6.2/tachyons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand"><img src="./assets/images/logo.png" alt=""></a>
+		<ul class="side-menu">
+			<li><a href="#" class="active"><i class="bi bi-grid"></i><span class="nones">Dashboard</span> </a></li>
+
+			<li>
+				<a href="#"><i class="bi bi-stack"></i><span class="nones">Buy ICO</span> </a>
+
+			</li>
+			<li><a href="#"><i class="bi bi-wallet"></i><span class="nones">Wallet</span></a></li>
+			<li><a href="#"><i class="bi bi-shuffle"></i><span class="nones">Transactions</span> </a></li>
+			<li><a href="#"><i class="bi bi-universal-access-circle"></i><span class="nones">FAQ</span> </a></li>
+			<li>
+				<a href="#"><i class="bi bi-person-check"></i> <span class="nones">Account</span></a>
+				<ul class="side-dropdown">
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Login History</a></li>
+					<li><a href="#">Misc</a></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav class="sticks">
+			<i class='bx bx-menu toggle-sidebar'></i>
+			<form action="#">
+				<div class="form-group">
+
+					<input type="text">
+					<i class='bx bx-search icon'></i>
+				</div>
+				<div class="logo_container">
+					<div class="small_logo">
+						<img src="./assets/images/small_logo.png" alt="">
+					</div>
+					<div class="optn">
+						<i class='bx bx-dots-vertical-rounded' id="mob-menu"></i>
+					</div>
+				</div>
+
+			</form>
+			<a href="#" class="nav-link">
+				<img src="./assets/images/english_logo.png" alt="" width="25" height="20">
+				<i class="bi bi-bell"></i>
+				<span class="badge">5</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class="bi bi-wallet"></i>
+			</a>
+
+			<div class="profile">
+				<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+					alt="">
+				<span>CIC 3,458.88</span>
+				<ul class="profile-link">
+					<li><a href="#"><i class='bx bxs-user-circle icon'></i> Profile</a></li>
+					<li><a href="#"><i class='bx bxs-cog'></i> Settings</a></li>
+					<li><a href="#"><i class='bx bxs-log-out-circle'></i> Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<div class="bar_container">
+			<div class="barChart">
+				<h5 class="first_container_heading">ICO TOKEN (SUPPLY & DEMAND)</h5>
+				<canvas id="myChart"></canvas>
+			</div>
+			<div class="doughnut">
+				<h5 class="first_container_heading">TOKEN DISTRIBUTION</h5>
+				<canvas id="pieChart"></canvas>
+			</div>
+		</div>
+		<div class="icon_token">
+			<div class="token_1">
+				<label for="">ICO Token</label>
+				<input type="text" name="" id="" value="5000">
+
+			</div>
+
+			<div class="arrow_icon">
+				<i class="bi bi-arrow-right"></i>
+			</div>
+			<div class="token_1">
+				<label for="">ETH</label>
+				<input type="text" name="" id="" value="1">
+			</div>
+			<div class="token_3">
+				<input list="browsers" name="browser" id="browser" value="ETH">
+				<datalist id="browsers">
+					<option value="ETH">
+					<option value="BTC">
+					<option value="LTC">
+					<option value="USDT">
+					<option value="Credit Card">
+				</datalist>
+			</div>
+			<div class="token_4">
+				<label for="">Wallet address</label>
+				<input type="text" name="" id="" value="0xe834a970619218d0a7db4ee5a3c87022e71e177f">
+			</div>
+			<div class="icon_btn">
+				<button>Buy Now</button>
+			</div>
+		</div>
+
+		<div class="container_3">
+			<div class="card1">
+				<div class="card1_content">
+					<h5>ICO TOKEN BALANCE</h5>
+					<div class="token_content">
+						<div class="bal">
+							<span>Your balance</span>
+							<span>3,458.88 CIC</span>
+							<span>Welcome bonus +30% expires in 21 days</span>
+						</div>
+						<div class="icon_btn2">
+							<button>Withdraw<i class="bi bi-arrow-right"></i></button>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+			<div class="card2">
+				<h5>TOTAL SALE PROCESS</h5>
+				<div class="card2_content">
+					<div>
+						<span>$0</span>
+						<span>$5M</span>
+					</div>
+					<div class="progress">
+						<div class="progress-bar"></div>
+					</div>
+					<div>
+						<span>Distributed</span>
+						<span>6,234,125 CIC</span>
+					</div>
+
+					<div>
+						<span>Contributed</span>
+						<span>5478 ETH|80 CIC</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- content 4 section starts -->
+		<div class="content-4">
+			<h5 class="h6">RECENT TRANSACTIONS</h5>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>status</th>
+						<th>date</th>
+						<th>amount</th>
+						<th>currency</th>
+						<th>currency</th>
+						<th>tokens(cic)</th>
+						<th>details</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><i class="bi bi-record-circle success"></i>Paid</td>
+						<td class="date">2018-01-03</td>
+						<td class="amnt"><button class="scs">Deposit</button></td>
+						<td>5.34111</td>
+						<td><i class="bi bi-currency-bitcoin"></i>ETH</td>
+						<td>-</td>
+						<td>Deposit to your Balance</td>
+						<td><i class="bi bi-hand-thumbs-up warning"></i></td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-record-circle success"></i>Paid</td>
+						<td class="date">2018-01-03</td>
+						<td class="amnt"><button class="scs">Deposit</button></td>
+						<td>5.34111</td>
+						<td><i class="bi bi-currency-bitcoin"></i>ETH</td>
+						<td>3,258</td>
+						<td>Tokens Purchase</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-record-circle warning"></i>in Process</td>
+						<td class="date">2018-01-21</td>
+						<td class="amnt"><button class="warn">Referal</button></td>
+						<td>-</td>
+						<td>-</td>
+						<td>200.88</td>
+						<td>Referal Promo Bonus</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-record-circle danger"></i>pending</td>
+						<td class="date">2018-01-25</td>
+						<td class="amnt"><button class="dan">Withdrawl</button></td>
+						<td>-</td>
+						<td>-</td>
+						<td>-3,458.88</td>
+						<td>Tokens withdrawn</td>
+						<td><i class="bi bi-currency-dollar warning"></i></td>
+					</tr>
+					<tr>
+						<td><i class="bi bi-record-circle success"></i>Paid</td>
+						<td class="date">2018-01-28</td>
+						<td class="amnt"><button class="dan">Deposit</button></td>
+						<td>0.8791</td>
+						<td><i class="bi bi-currency-bitcoin"></i>BTC</td>
+						<td>--</td>
+						<td>Deposit to your Balance</td>
+						<td><i class="bi bi-hand-thumbs-up warning"></i></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<!-- content 4 section ends -->
+		<!-- content 5 section stars -->
+		<div class="content-5">
+			<div class="image-container">
+				<h5 class="card-h6 h6">LATEST UPDATES</h5>
+				<div class="image-content">
+					<img src="/assets/images/blog-post.png" alt="blog post">
+					<div class="image-content-body">
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of
+							the
+							card's content.</p>
+						<a href="#" class="card-link link-one">Card link</a>
+						<a href="#" class="card-link link-two">Another link</a>
+					</div>
+
+					<div class="image-content-footer">
+						<span class="float-left">3 hours ago</span>
+						<a href="#" class="card-link link-three">Read More</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="slider-container">
+				<h5 class="card-h6 h6">ROADMAP</h5>
+				<div class="slider-content">
+					<section class="cd-horizontal-timeline">
+						<div class="timeline">
+							<div class="events-wrapper">
+								<div class="events">
+									<ol>
+										<li><a href="#0" data-date="16/01/2016" class="selected">Jan 16</a></li>
+										<li><a href="#0" data-date="28/02/2016">28 Feb</a></li>
+										<li><a href="#0" data-date="20/03/2016">20 Mar</a></li>
+										<li><a href="#0" data-date="20/05/2016">20 May</a></li>
+										<li><a href="#0" data-date="09/07/2016">09 July</a></li>
+										<li><a href="#0" data-date="30/08/2016">30 Aug</a></li>
+										<li><a href="#0" data-date="15/09/2016">15 Sep</a></li>
+									</ol>
+
+									<span class="filling-line" aria-hidden="true"></span>
+								</div> <!-- .events -->
+							</div> <!-- .events-wrapper -->
+
+							<ul class="cd-timeline-navigation">
+								<li><a href="#0" class="prev inactive">Prev</a></li>
+								<li><a href="#0" class="next">Next</a></li>
+							</ul> <!-- .cd-timeline-navigation -->
+						</div> <!-- .timeline -->
+
+						<div class="events-content">
+							<ol>
+								<li class="selected" data-date="16/01/2016">
+									<h2 class="slider_head">CryptoDash platform idea</h2>
+									<p class="para">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium
+										officia,
+										fugit
+										recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+
+
+									</p>
+								</li>
+
+								<li data-date="28/02/2016">
+									<h2 class="slider_head">Technical & strategy development</h2>
+
+									<p class="para">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium
+										officia,
+										fugit
+										recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+									</p>
+								</li>
+
+								<li data-date="20/03/2016">
+									<h2 class="slider_head">ICO Launched</h2>
+
+									<p class="para">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium
+										officia,
+										fugit
+										recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+
+
+									</p>
+								</li>
+
+								<li data-date="20/05/2016">
+									<h2 class="slider_head">CryptoDash beta version launched</h2>
+
+									<p class="para">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium
+										officia,
+										fugit
+										recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+									</p>
+								</li>
+
+								<li data-date="09/07/2016">
+									<h2 class="slider_head">Mobile apps for iOS & Android</h2>
+
+									<p class="para">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium
+										officia,
+										fugit
+										recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+									</p>
+								</li>
+
+								<li data-date="30/08/2016">
+									<h2 class="slider_head">Partnership with business merchant</h2>
+
+									<p class="para">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium
+										officia,
+										fugit
+										recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+									</p>
+								</li>
+
+
+								<li data-date="15/09/2016">
+									<h2 class="slider_head">Launch live paltform</h2>
+
+									<p class="para">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium
+										officia,
+										fugit
+										recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at.
+									</p>
+								</li>
+
+							</ol>
+						</div>
+						<!-- .events-content -->
+					</section>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- content 5 section ends -->
+
+		<!-- footer section stars -->
+		<footer class="footer">
+			<span class="footer-left">Copyright &COPY; 2022 <a href="#" class="footer-anchor">ThemeSelection
+				</a>, All rights reserved. </span>
+			<span class="footer-right">Hand-crafted & Made with <i class="bi bi-heart heart"></i></span>
+		</footer>
+		<!-- footer section ends -->
+	</section>
+	<!-- NAVBAR -->
+	<script src="./assets/js/script.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
